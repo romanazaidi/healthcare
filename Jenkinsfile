@@ -47,8 +47,8 @@ node{
     stage('Pushing it ot the DockerHub'){
         echo 'Pushing the docker image to DockerHub'
         withCredentials([string(credentialsId: 'dockPassword', variable: 'dockpaswd')]) {
-        sh "${dockerCMD} login -u staragiledevops -p ${dockpaswd}"
-        sh "${dockerCMD} push staragiledevops/insdemo:${tagName}"
+        sh "${dockerCMD} login -u romanazaidi -p ${dockpaswd}"
+        sh "${dockerCMD} push romanazaidi/healthcare:${tagName}"
         }    
         }
         
